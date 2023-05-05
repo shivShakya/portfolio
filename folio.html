@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r133/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r128/examples/js/controls/OrbitControls.js"></script>
+    <link rel = "stylesheet" type="text/css" href="folio.css"/>
+    <title>My Portfolio Site</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <button class="btn-tog" onclick="toggleSidebar()" style="width: 25px;">☰</button>
+   <div class="navbar">
+      <div class="sidebar">
+           <img src="material/shivam.jpeg" alt="Profile Image">
+            <ul class="side-ul">
+                <li class="side-li chat-toggle"><div>About</div></li>
+                <li class="side-li"><div>Projects</div></li>
+                <li class="side-li"><div>Resume</div></li>
+                <li class="side-li"><div>Contact</div></li>
+            </ul>
+       </div> 
+       <button id="mode-toggle">
+        <img src="material/sun.png" alt="Mode Toggle">
+      </button> 
+    </div>
+<div class="main-page">
+    <div class="inst">
+            <h3>Instructions</h3>
+            <h2>  1 .  press shift to change the camera view to specific project</h2>
+            <h2>  2 .  press the first letter of project name to rotate around it</h2>
+    </div>
+    <div >
+     <div  class="chat-box" >   <h1>Welcome to CraftStore </h1></div>
+     <div class="chat-box-1" ><h1> Welcome to Aamchi Mess </h1></div>
+    </div>
+</div> 
+    <div class="imp-btn">
+             <Button id="change-script-btn"> Change camera positions</Button>
+            <Button id="craftstore" >craftStore</Button>
+            <Button id="mess">mess</Button>
+            <Button id="lab">Pylab</Button>
+            <Button id="robo">Robot</Button>
+            <Button id="room">Room</Button>
+            <Button id="cert">Certificates</Button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script src="index.js"></script>
+    <script  src="script1.js" id="myScript"></script>
+
+</body>
+</html>
