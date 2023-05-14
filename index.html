@@ -9,21 +9,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
     <script src="https://cdn.rawgit.com/mrdoob/three.js/r128/examples/js/controls/OrbitControls.js"></script>
     <link rel = "stylesheet" type="text/css" href="folio.css"/>
-    <title>My Portfolio Site</title>
+    <title>My Portfolio Site - (Shivam Shakya)</title>
 </head>
 <body>
-    <canvas id="canvas"></canvas>
+        <canvas id="canvas"></canvas>
+    
     <button class="btn-tog" onclick="toggleSidebar()" style="width: 25px;">☰</button>
    <div class="navbar">
       <div class="sidebar">
            <img src="material/shivam.jpeg" alt="Profile Image">
             <ul class="side-ul">
-                <li class="side-li chat-toggle"><div>About</div></li>
-                <li class="side-li"><div>Projects</div></li>
-                <li class="side-li"><div>Resume</div></li>
+                <li class="side-li about"><div>About Me</div></li>
+                <li class="side-li project"><div>Projects</div></li>
+                <li class="side-li certificate"><div>Certificates</div></li>
+                <li class="side-li clickable-div"><div>Resume</div></li>
                 <li class="side-li"><div>Contact</div></li>
             </ul>
        </div> 
+          
+    </div>
        <button id="mode-toggle">
         <img src="material/sun.png" alt="Mode Toggle">
       </button> 
@@ -31,18 +35,208 @@
 <div class="main-page">
     <div class="inst">
             <h3>Instructions</h3>
-            <h2>  1 .  press shift to change the camera view to specific project</h2>
-            <h2>  2 .  press the first letter of project name to rotate around it</h2>
+            <h2>  1 .  toogle every button you click . to see the the content and hide it.</h2>
+            <h2>  2 .  press Space to change the camera view to specific project</h2>
+            <h2>  3 .  press the first letter of project name to rotate around it</h2>
+    </div>
+    <div class="resume">
+        <div id="resume-div" style="display: block;">
+            <object data="material/ShivamShakyaResume.pdf" type="application/pdf" width="100%" height="800px">
+                  <p>Unable to display PDF. Please download it <a href="material/ShivamShakyaResume.pdf" target="_blank">here</a>.</p>
+            </object>
+          </div>
     </div>
     <div >
-     <div  class="chat-box" >   <h1>Welcome to CraftStore </h1></div>
-     <div class="chat-box-1" ><h1> Welcome to Aamchi Mess </h1></div>
+     <div  class="craft-box" style="overflow: auto;">
+        <div class="title">
+            <h1>Craft Store - A Mern website</h1>
+        </div>
+
+
+        <div class="content" >
+            <p><b>Craft Store:</b> This project is something I've always wanted to work on...</p>
+            <p><b>Problem:</b> In my childhood, I used to enjoy making papercraft, designing toys, and creating architectural models. I often wondered what if I could sell these creations and earn my own pocket money. This thought led me to the idea of creating an online platform where I could showcase and sell my crafts.</p>
+            <p>Furthermore, I noticed that there are many talented handicraft workers who lack a proper platform to showcase and sell their products. They often rely on local markets and struggle to reach a larger audience, limiting their growth potential. This is where my website, "Craft Store," comes into play.</p>
+            <p>Craft Store aims to provide a platform for both established small businesses and individual crafters to sell their handcrafted products easily. By leveraging a recommendation system and implementing various filtering options, the website ensures that customers can discover a wide range of crafts based on their preferences. The platform not only benefits sellers by increasing their reach and potential customer base but also offers customers a convenient and diverse shopping experience.</p>
+            <p><b>Technologies Used :</b> MERN stack (MongoDB database , Express , React framework , Node.js</p>
+            <h1>You can check out Craft Store here:</h1>
+            <div class="links">
+                 <p>
+                       <a href="https://craftstore-shivshakya.vercel.app/signup">https://craftstore-shivshakya.vercel.app/signup</a>
+                 </p>
+                 <div class="round-button" >
+                       <img src="material/github-mark.png" alt="github" class="github-icon">
+                 </div>
+                 <a  href="https://github.com/shivShakya/myApp" class="github-link">Github Repo</a>
+            </div>
+       </div>
+
+    <div class="container" >
+        <img src="material/craft/one.png" alt="Image 1">
+        <img src="material/craft/two.png" alt="Image 2">
+        <img src="material/craft/three.png" alt="Image 3">
+        <img src="material/craft/four.png" alt="Image 4">
+        <img src="material/craft/five.png" alt="Image 5">
+        <img src="material/craft/six.png" alt="Image 6">
+        <img src="material/craft/seven.png" alt="Image 7"> 
+    </div>
+
+       </div>
+     <div class="mess-box" style="overflow: auto;">
+        <div class="title">
+            <h1>Aamchi Mess - An Android Application</h1>
+        </div>
+
+        <div class="content" >
+            <p><b>Aamchi Mess: A Mess Management System</b></p>
+            <p>This project was assigned to our group as part of our software engineering course. We chose this topic because we were facing daily problems related to the mess while living in the college hostel.</p>
+            <p>For this project, we developed an Android application and followed the principles and best practices of software engineering. Our process involved requirement analysis, design and architecture, development, testing, and deployment. Working on this project provided us with valuable learning experiences.</p>
+            <p>I had the opportunity to lead the team and mentor its members as I had knowledge about most of the technologies involved. I provided necessary training to my team members on Android Studio, Flask framework for the backend, and also introduced them to MongoDB.</p>
+            <p>This project enhanced my skills in team building and leadership, and gave me a better understanding of how work is carried out in professional settings. Overall, it was a rewarding experience.</p>
+            <p><b>Technologies Used:</b> Android Studio Software , java ,xml ,python(Flask), mongoDB database , POSTMAN  </p>
+            <h1>You can check out the code for the Aamchi Mess App here:</h1>
+            <div class="links">
+                 <div class="round-button" >
+                       <img src="material/github-mark.png" alt="github" class="github-icon">
+                 </div>
+                 <a  href="https://github.com/shivShakya/myApp" class="github-link">Github Repo</a>
+            </div>
+       </div>
+
+    <div class="container" >
+        <img src="material/aamchi/1.jpeg" alt="Image 1">
+        <img src="material/aamchi/2.jpeg" alt="Image 2">
+        <img src="material/aamchi/3.jpeg" alt="Image 3">
+        <img src="material/aamchi/4.jpeg" alt="Image 4">
+        <img src="material/aamchi/5.jpeg" alt="Image 5">
+        <img src="material/aamchi/6.jpeg" alt="Image 6">
+        <img src="material/aamchi/7.jpeg" alt="Image 7"> 
+        <img src="material/aamchi/7.jpeg" alt="Image 8"> 
+        <img src="material/aamchi/8.jpeg" alt="Image 9"> 
+        <img src="material/aamchi/9.jpeg" alt="Image 10"> 
+        <img src="material/aamchi/10.jpeg" alt="Image 11"> 
+        <img src="material/aamchi/11.jpeg" alt="Image 12"> 
+        <img src="material/aamchi/12.jpeg" alt="Image 13"> 
+        <img src="material/aamchi/13.jpeg" alt="Image 14"> 
+    </div>
+     </div>
+     <div class="robo-box" style="overflow: auto;"> <div class="title">
+        <h1>Robotic Simulation</h1>
+    </div>
+     
+    <div class="content" >
+        <p><b>Robotic Simulation</b></p>
+        <p><b>Problem:</b> Manufacturing companies require a simulation-based system to effectively manufacture their products. Simulation helps them envision and create high-quality products.</p>
+        <p>This project was assigned by my teacher in the subject of computational geometry and computer graphics. As someone who has always had a keen interest in 3D graphics, I began working with Blender, a 3D software, from a young age. This experience proved invaluable when creating this project using three.js. Additionally, I used websites like <a href="https://sketchfab.com/feed">Sketchfab</a> to download 3D models for designing purposes.</p>
+        <p>I am grateful for the experience I gained while working with three.js, WebGL, HTML, CSS, and JavaScript, as they proved to be extremely useful during the development of this project. Furthermore, working on this project allowed me to enhance my skills in writing classes and methods to make the program more modular, which was an opportunity for personal growth.</p>
+        <h1>Check out Robot Simulation here:</h1>
+        <div class="links">
+             <p>
+                   <a href="https://shivshakya.github.io/robotSimulation/">https://shivshakya.github.io/robotSimulation</a>
+             </p>
+             <div class="round-button" >
+                   <img src="material/github-mark.png" alt="github" class="github-icon">
+             </div>
+             <a  href="https://github.com/shivShakya/myApp" class="github-link">Github Repo</a>
+        </div>
+   </div>
+
+     <div class="container" >
+            <img src="material/robo/robo1.png" alt="Image 1">
+            <img src="material/robo/robo2.png" alt="Image 2">
+            <img src="material/robo/robo3.png" alt="Image 3">
+            <img src="material/robo/robo4.png" alt="Image 4">
+         </div>
+</div>
+     <div class="lab-box" style="overflow: auto;"> <div class="title">
+        <h1>Face Recognition System And other Python work</h1>
+    </div>
+
+    <div class="content" >
+        <p><b>Face Recognition Attendance:</b> A machine learning project</p>
+        <p><b>Problem:</b>I often wondered why my university relied on biometric machines for attendance when it could be easily marked using online platforms.</p>
+          <p>In this system, a machine learning model is trained with facial data to recognize individuals and mark their attendance accordingly. Inspired by the potential of machine learning and data science, I embarked on creating a biometric-like system. After dedicated efforts spanning two months, I successfully developed this attendance system.</p>
+        <p> So when i was learning about machine learning and data science , i got an idea to create something like biometric system. And after the 2 months of efforts I developed this system.</p>
+        <p>Throughout this project, I gained practical experience in machine learning and data science methodologies, including data collection, exploratory data analysis (EDA), feature engineering, and model deployment on the web. Leveraging my strong command of Python, I found the process incredibly interesting. Additionally, automating file creation and deletion was a significant aspect of this project, providing valuable insights and learning opportunities.</p>
+        <p>Technologies used in this project include Python, React, Flask framework (Python), and Python libraries such as scikit-learn, pandas, and numpy, as and when required.</p>
+        <h1>You can check out Attendance System here:</h1>
+        <div class="links">
+             <p>
+                   <a href="https://craftstore-shivshakya.vercel.app/signup">https://craftstore-shivshakya.vercel.app/signup</a>
+             </p>
+             <div class="round-button" >
+                   <img src="material/github-mark.png" alt="github" class="github-icon">
+             </div>
+             <a  href="https://github.com/shivShakya/myApp" class="github-link">Github Repo</a>
+        </div>
+   </div>
+
+<div class="container" >
+    <img src="material/attendance.png" alt="Image 1">
+</div>
+    </div>
+     <div class="room-box" style="overflow: auto;"> <div class="title">
+        <h1>About Me</h1>
+    </div>
+    
+    <div class="content" >
+        <p></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate euismod lacus id vestibulum. Integer vel est eget enim ultrices venenatis a vel sapien. Nam eget lacinia eros. Duis consequat aliquam sapien, quis lobortis est rhoncus in. Morbi eget purus sit amet elit sodales auctor eget at dolor. Duis quis dolor massa. Ut volutpat sapien nunc, quis interdum augue imperdiet a. Donec commodo malesuada diam eu bibendum.</p>
+        <p>Pellentesque ut risus nec velit euismod accumsan sed ut leo. Sed facilisis vestibulum erat, vel maximus justo tempus sit amet. Duis varius odio sit amet neque tristique, vitae consectetur orci rhoncus. Nam at sem non ipsum rutrum malesuada. Proin rhoncus velit ac magna viverra imperdiet. Vivamus laoreet elit elit, vel imperdiet mauris volutpat nec. Morbi congue quam orci, id bibendum ex semper sit amet. Praesent maximus justo et ipsum sollicitudin, ac consequat ex elementum. Nam eu ullamcorper sapien. Proin quis nulla nisl. Donec pellentesque nisl et orci placerat, vel pretium justo interdum. Duis non metus vel velit tristique tincidunt vel eget nunc. </p>
+        <p>Fusce interdum, dolor ut dignissim pretium, enim tellus congue magna, id venenatis purus massa quis odio. Nulla facilisi. Proin fermentum posuere leo, vel rhoncus sapien euismod nec. Donec</p>
+
+   </div>
+
+   <div class="container">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+    <img src="image4.jpg" alt="Image 4">
+    <img src="image5.jpg" alt="Image 5">
+    <img src="image6.jpg" alt="Image 6">
+    <img src="image7.jpg" alt="Image 7">
+</div>
+  </div>
+
+     <div class="cert-box" style="overflow: auto;"> <div class="title">
+        <h1>Certificates - Coding , Theatre, Debate, Poetry , Academic</h1>
+    </div>
+
+
+       <div class="content" >
+           <p> This is where I keep all my certificates from various fields. Over the years, I have earned certificates in diverse areas such as theatre, debate, academics, and coding competitions. </p>
+           <p><b>Coding Competitions:</b> I had the opportunity to participate in a Hackathon Competition where I won the first prize. The competition focused on Signal Vibration Processing, specifically finding the time interval between two consecutive peaks in an audio signal. Although signal processing was new to me, I embraced the challenge and successfully solved the problem through my dedicated efforts.</p>
+           <p><b>Theatre Competitions:</b> During my college years, I actively participated in my college theatre society called DHWANI. Being a part of the society for three years was an incredible and transformative experience. From initially being a shy and underconfident student, I evolved into someone who could confidently express myself on stage through street plays and stage performances. The journey was mesmerizing, and I cherish the personal growth it brought me. </p>
+        
+           <p><b>Debates : </b> During my school days, I enthusiastically participated in various debate and poetry competitions, both within my college and at external events. As a result, I earned several certificates that recognize my passion for public speaking and articulating my thoughts effectively.</p>
+           <p><b> Academic :</b>  This section comprises all my academic certificates, highlighting my academic achievements from 10th grade to my master's degree.</p>
+           <p> If you're interested in exploring my collection of certificates, please follow the provided link :</p>
+       </div>
+
+       <div class="container">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image4.jpg" alt="Image 4">
+        <img src="image5.jpg" alt="Image 5">
+        <img src="image6.jpg" alt="Image 6">
+        <img src="image7.jpg" alt="Image 7">
+    </div>
+  </div>
+    </div>
+    <div class="option-menu" id="projects-menu">
+          <uL>
+              <li class="c-op">CraftStore</li>
+              <li class="a-op">Aamchi Mess</li>
+              <li class="f-op">Face Recognition Attandance System</li>
+              <li class="r-op">Robot Simulation</li>
+          </uL>
     </div>
 </div> 
     <div class="imp-btn">
-             <Button id="change-script-btn"> Change camera positions</Button>
-            <Button id="craftstore" >craftStore</Button>
-            <Button id="mess">mess</Button>
+            <Button id="change-script-btn"> Change camera positions</Button>
+            <Button id="craftstore" >CraftStore</Button>
+            <Button id="mess">AamchiMess</Button>
             <Button id="lab">Pylab</Button>
             <Button id="robo">Robot</Button>
             <Button id="room">Room</Button>
@@ -51,7 +245,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <script src="index.js"></script>
-    <script  src="script1.js" id="myScript"></script>
-
+    
+    <script  src="script1.js" id="myScript" class="hidden_s" ></script>
+    
 </body>
 </html>

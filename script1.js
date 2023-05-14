@@ -6,10 +6,9 @@ const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
 //camera look At
-let shiftPressed = false;
+let spacePressed = false;
 let lookAtPositionIndex = 0;
 const lookAtPositions = [
-
   new THREE.Vector3(0,0,0),    // Default position
   new THREE.Vector3(2,3,-16),   // for craftbox
   new THREE.Vector3(10,3,-22),  // for mess
@@ -19,16 +18,30 @@ const lookAtPositions = [
   // Up position                   // for certificates 
 ];
 
+const lookAtPositionNames = [
+  'Default position',
+  'Craftbox position',
+  'Mess position',
+  'Pylab position',
+  'Robot position',
+  'Room position',
+  // Up position                   // for certificates 
+];
+
 document.addEventListener('keydown', function(event) {
-  if (event.key === 'Shift') {
-    shiftPressed = true;
+  if (event.key === ' ') { // Check for Space key
+    spacePressed = true;
   }
 });
+
 document.addEventListener('keyup', function(event) {
-  if (event.key === 'Shift') {
-    shiftPressed = false;
-    lookAtPositionIndex = (lookAtPositionIndex + 1) % lookAtPositions.length;
-    camera.lookAt(lookAtPositions[lookAtPositionIndex]);
+  if (event.key === ' ') { // Check for Space key
+    spacePressed = false;
+      lookAtPositionIndex = (lookAtPositionIndex + 1) % lookAtPositions.length;
+      const newPosition = lookAtPositions[lookAtPositionIndex];
+      const newPositionName = lookAtPositionNames[lookAtPositionIndex];
+      window.alert(newPositionName);
+      camera.lookAt(newPosition);
   }
 });
 // camera look at change projects 
@@ -204,7 +217,7 @@ modelCall('material/lab.glb',17,11,8,16,50,0,-0.5,0);
 let x = 0;
 let y = 10;
 let z = 0;
-modelCall('material/spaceRob.glb',x,y,z,10,50,0,0,0);
+modelCall('material/cuteRobo.glb',x,y,z,10,50,0,0,0);
 let xR = -12;
 let yR = 8;
 let zR = 17;
@@ -213,16 +226,20 @@ modelCall('material/room.glb',xR,yR,zR,5000,50,0,0,0);
 
 
 //tags for the projects
-let craftPlane =  addPlaneMess('material/mess.png',6,6,-12,5);
+let craftPlane =  addPlaneMess('material/craftStore.png',6,6,-12,5);
 craftPlane.rotation.y = 0.5;
-let messPlane = addPlaneMess('material/mess.png',7,5,-22,5);
-let labPlane = addPlaneMess('material/mess.png',15,17,5,5);
-labPlane.rotation.y = 0.3;
-let roboPlane = addPlaneMess('material/mess.png',x,y+5,z,5);
-let roomPlane = addPlaneMess('material/mess.png',xR,yR+15,zR,5);
-let certPlane = addPlaneMess('material/mess.png',xR+1.7,yR+1,zR-0.7,1);
+let messPlane = addPlaneMess('material/aamchi.png',7,5,-22,5);
+let labPlane = addPlaneMess('material/face.png',15,17,5,5);
+labPlane.rotation.y = -1.5;
+let roboPlane = addPlaneMess('material/robo.png',x,y+10,z,5);
+let roomPlane = addPlaneMess('material/room.png',xR,yR+9,zR,5);
+let certPlane = addPlaneMess('material/cert.png',xR+0.5,yR+1,zR-0.3,0.5);
 certPlane.rotation.y = -0.5;
-let plane = [craftPlane,messPlane,labPlane,roboPlane, roomPlane , certPlane];
+
+//logo aamchi mess
+let aamchiPlane = addPlaneMess('material/aamchi_mess.png',10.2,3.5,-23,1.4);
+aamchiPlane.rotation.y -= 0.5;
+let plane = [craftPlane,messPlane,labPlane,roboPlane, roomPlane , certPlane, aamchiPlane];
 scene.add(...plane);
 
 //boxes
@@ -231,7 +248,7 @@ messBox.rotation.y = -0.5;
 const craftBox = createBoxes(7,7,7,0,true,1,1,0.8,2,3,-16);
 const labBox = createBoxes(10,5,10,0,true,1,0.5,1,17,12,8);
 labBox.rotation.y = -0.5;
-const roboBox = createBoxes(2,2,2,0,true,1,1,1,x,y,z);
+const roboBox = createBoxes(2,2,2,0,true,2,5,2,x,y,z);
 const roomBox = createBoxes(4,4,4,0,true,1,1,1,xR,yR+3,zR);
 const certBox = createBoxes(1.5,3,0.5,0,true,0.5,0.5,0.5,xR+0.6,yR+1,zR-0.9);
 let boxes = [craftBox ,messBox , labBox , roboBox, roomBox, certBox];
