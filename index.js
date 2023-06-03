@@ -29,22 +29,20 @@ function toggleSidebar() {
   const lab_Box = document.querySelector('.lab-box');
   const room_Box = document.querySelector('.room-box');
   const cert_Box = document.querySelector('.cert-box');
+  const other_box = document.querySelector('.other-box');
 
 
 
-  const resumeLi = document.querySelector('.clickable-div');
-  const resume = document.querySelector('.resume');
-  resume.style.display = 'none';
 
-  resumeLi.addEventListener('click', function() {
-    if (resume.style.display === 'none') {
-      resume.style.display = 'block';
-    } else {
-      resume.style.display = 'none';
-    }
+  const resumeButton = document.querySelector('.resume-but');
+  const resume = document.querySelector('.resume-div');
+
+  resumeButton.addEventListener('click', function() {
+    console.log(resumeButton);
+    console.log(resume);
+    resume.classList.toggle('chat-1');
+
   });
-
-
 
   const aboutMeItem = document.querySelector('.about');
 
@@ -53,9 +51,11 @@ function toggleSidebar() {
     });
 
   
-  const projectMenu = document.querySelector('.project');
-  const project = document.querySelector('.option-menu');
-  projectMenu.addEventListener('click', function(){
+
+
+const projectMenu = document.querySelector('.project');
+const project = document.querySelector('.option-menu');
+projectMenu.addEventListener('click', function(){
          if (project.style.display === 'none'){
                 project.style.display = 'block';
          } else {
@@ -64,11 +64,20 @@ function toggleSidebar() {
   })
 
 
-  const certificate = document.querySelector('.certificate');
 
+  const certificate = document.querySelector('.certificate');
   certificate.addEventListener('click', function(){
            cert_Box.classList.toggle('chat-1');
   })
+
+  
+
+  const contact = document.querySelector('.contact-but');
+  const contBox = document.querySelector('.contact-box');
+  contact.addEventListener('click', function(){
+         contBox.classList.toggle('chat-1');
+  })
+
 
 
 
@@ -92,6 +101,10 @@ function toggleSidebar() {
    certToggle.addEventListener('click', function(){
           cert_Box.classList.toggle('chat-1');
     });
+
+
+
+
  
  // sidebar toggle
   const modeToggle = document.getElementById('mode-toggle');
@@ -108,6 +121,7 @@ const c_op = document.querySelector('.c-op');
 const a_op = document.querySelector('.a-op');
 const f_op = document.querySelector('.f-op');
 const r_op = document.querySelector('.r-op');
+const o_op = document.querySelector('.o-op');
 
 c_op.addEventListener('click', function(){
        console.log("hi");
@@ -122,24 +136,21 @@ f_op.addEventListener('click', function(){
 r_op.addEventListener('click', function(){
        robo_Box.classList.toggle('chat-1');
  });
+ o_op.addEventListener('click',function(){
+        other_box.classList.toggle('chat-1');
+ });
 
 
+ const land = document.getElementById("land");
+ const canva = document.querySelector('.canva-d');
+ const pos = document.querySelector('.change-script-btn');
+ land.addEventListener('click',function(){
+       if (canva.style.display === 'none'){
+                  canva.style.display = 'block';
+       }else{
+              canva.style.display = 'none';
+       }  
+       
+ });
 
-
-
-  /*
-  const toggleButton = document.getElementById('change-script-btn');
-  const scriptTag = document.getElementById('myScript');
-
-  toggleButton.addEventListener('click', () => {
-    if (scriptTag.src.includes('script.js')) {
-      scriptTag.src = 'script1.js';
-    } else {
-      scriptTag.src = 'script.js';
-    }
-  });
-  */
-
-
-
-//
+ 

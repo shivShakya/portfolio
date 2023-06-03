@@ -2,6 +2,12 @@ body {
     background-color: #f8f8f8;
     color: #333;
     transition: background-color 0.5s ease-out, color 0.5s ease-out;
+    height: 100px;
+  }
+
+.dark-mode{
+     background-color: #333;
+     color: #f8f8f8;
   }
 
   #mode-toggle {
@@ -81,12 +87,12 @@ body {
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
-    margin-top: 60px;
+    margin-top: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
 
   .side-ul {
-    margin-top: 20vh;
+    margin-top: 2vh;
     list-style: none;
   }
   .side-li {
@@ -203,6 +209,57 @@ body {
   position: fixed;
 }
 
+.contact-box{
+  visibility: hidden;
+  color:rgb(255, 255, 255);
+  margin-top: 0px;
+  padding-left: 50px;
+  width: 70%; 
+  height: 400px; 
+  margin-left: 50px; 
+  background-color: rgb(41, 80, 116);
+  border: 5px solid rgb(15, 42, 163);
+  border-radius: 0px;
+  z-index: -2;
+  box-shadow: 0 0 30px rgba(93, 32, 32, 0.5);
+  position: fixed;
+}
+.other-box{
+  visibility: hidden;
+  color:rgb(255, 255, 255);
+  margin-top: 0px;
+  padding-left: 50px;
+  width: 70%; 
+  height: 800px; 
+  margin-left: 50px; 
+  background-color: rgb(41, 80, 116);
+  border: 5px solid rgb(15, 42, 163);
+  border-radius: 0px;
+  z-index: -2;
+  box-shadow: 0 0 30px rgba(93, 32, 32, 0.5);
+  position: fixed;
+}
+
+.resume-div {
+  visibility: hidden;
+  margin-top: 0px;
+  padding-left: 50px;
+  width: 70%; 
+  height: 800px; 
+  margin-left: 50px; 
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 0px;
+  z-index: -2;
+  box-shadow: 0 0 30px rgba(93, 32, 32, 0.5);
+  position: fixed;
+}
+#resume{
+    height:100%;
+    margin-left: -50px;
+}
+  
+
+
 .chat-1{
   visibility: visible;
 }
@@ -228,21 +285,21 @@ body {
 }
 
 #change-script-btn{
-   margin-bottom: 100px;
+   margin-top: 30rem;
+   margin-bottom: 10rem;
    background-color: rgb(41, 80, 116);
    color: #f8f8f8;
-   margin-right: 20px;
-   height: 50px;
+   margin-left: 6rem;
+   height: 20px;
    box-shadow: 0 0 50px rgba(0, 0, 0, 2);
 }
-
 
 .imp-btn{
    display: flex;
    justify-content: center;
    position: fixed;
    margin-left: 40%;
-   margin-top: 100px;
+   margin-top: 10%;
 }
 
 #craftstore{
@@ -250,61 +307,61 @@ body {
   margin-left: 0%;
   background-color: rgb(41, 80, 116);
   color: #f8f8f8;
-  height: 40px;
+  height: 20px;
   width: 100px;
-  margin-top: 5px;
+  margin-top: 138.5%;
   box-shadow: 0 0 50px rgba(0, 0, 0, 2);
 }
 #mess{
   display: none;
   margin-left: 0%;
-  height: 40px;
+  height: 20px;
   background-color: rgb(41, 80, 116);
   color: #f8f8f8;
   width: 100px;
-  margin-top: 5px;
+  margin-top: 138.5%;
   box-shadow: 0 0 50px rgba(0, 0, 0, 2);
 }
+
 #lab{
   display: none;
   margin-left: 0%;
-  height: 40px;
+  height: 20px;
   background-color: rgb(41, 80, 116);
   color: #f8f8f8;
   width: 100px;
-  margin-top: 5px;
+  margin-top: 138.5%;
   box-shadow: 0 0 50px rgba(0, 0, 0, 2);
-
 }
 #robo{
   display: none;
   margin-left: 0%;
-  height: 40px;
+  height: 20px;
   background-color: rgb(41, 80, 116);
   color: #f8f8f8;
   width: 100px;
-  margin-top: 5px;
+  margin-top: 138.5%;
   box-shadow: 0 0 50px rgba(0, 0, 0, 2);
 
 }
 #cert{
   display: none;
   margin-left: 0%;
-  height: 40px;
+  height: 20px;
   background-color: rgb(41, 80, 116);
   color: #f8f8f8;
   width: 100px;
-  margin-top: 5px;
+  margin-top: 138.5%;
   box-shadow: 0 0 50px rgba(0, 0, 0, 2);
 }
 #room{
   display: none;
   margin-left: 0%;
-  height: 40px;
+  height: 20px;
   background-color: rgb(41, 80, 116);
   color: #f8f8f8;
   width: 100px;
-  margin-top: 5px;
+  margin-top: 138.5%;
   box-shadow: 0 0 50px rgba(0, 0, 0, 2);
 }
 
@@ -365,19 +422,10 @@ body {
      color: #f8f8f8;
 }
 
-.resume{
-   margin-left: 100px;
-   width: 800px;
-}
-#resume-div {
-  width: 100%; 
-  height: 800px; }
-  
 object {
   width: 100%; 
   height: 100%; 
 }
-
 
 .round-button{
   display: inline-flex;
@@ -404,36 +452,110 @@ object {
 .github-link{
       margin-top: 0.5%;
       color: #f8f8f8;
+      margin-left: 20%;
 }
-
-
-@media screen and (min-width: 480px) {
-
-
-  .change-script-btn{
-      margin-top: 500px;
-  }
-}
-
 
 .option-menu {
     background-color: rgb(41, 80, 116);
     color: white;
     width: 200px;
-    height: 150px;
-    margin-left:  -16%; 
-    margin-top: 20%;
+    height: 160px;
     position: relative;
-    display: none;
-    
+    margin: 10%;
+    visibility: none;  
 }
 .option-menu ul{
      list-style: none;
-     margin-top: -5%;
-     margin-right: 20%;
+     margin-top: 0%;
+     margin-right: 10%;
+
 }
 .option-menu ul li{
      margin-top: 2%;
      background-color: rgb(14, 39, 62);
      padding-left: 20%;
+}
+
+
+.canva-d{
+   display: none;
+}
+
+#land{
+    margin-left: 42rem;
+}
+
+.full-page{
+    display: flex;
+    justify-content: left;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+
+  #change-script-btn{
+      margin-top: 50rem;
+      margin-left: -1rem;
+  }
+
+  .inst {
+        width: 80%; 
+        height:20rem;
+        margin-left: 2rem;
+        margin-top: 3rem;
+        margin-right: 5rem;
+        position: relative;   
+        z-index: -3000; 
+  }
+  .inst h2{
+        align-items: center;
+  }
+
+  #land{
+    margin-left: 44%;
+  }
+  .option-menu{
+      margin-left: 2%;
+      margin-top: 70%;
+      position: relative;
+  }
+  .main-page{
+       width: 100%;  
+       margin-left: 0rem;
+       margin-top: 2rem;
+       height: 60rem;
+       position: fixed;
+       z-index: -200;
+  }
+  #mode-toggle{
+      position: fixed;
+      margin-left: 80%;
+  }
+
+  .room-box{
+     width: 85%;
+     height: 90%;
+     margin-left: 0.5%;
+  }
+}
+
+
+.skills{
+    margin: 10%;
+    z-index: -6000;
+}
+
+.skills div{
+     margin-left: 10%;
+}
+.skills h2{
+     color: rgb(41, 80, 116);
+}
+
+.name{
+    display: flex;
+    justify-content: center;
 }

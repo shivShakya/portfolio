@@ -228,7 +228,7 @@ modelCall('material/room.glb',xR,yR,zR,5000,50,0,0,0);
 //tags for the projects
 let craftPlane =  addPlaneMess('material/craftStore.png',6,6,-12,5);
 craftPlane.rotation.y = 0.5;
-let messPlane = addPlaneMess('material/aamchi.png',7,5,-22,5);
+let messPlane = addPlaneMess('material/aamchi.png',10,5,-22,5);
 let labPlane = addPlaneMess('material/face.png',15,17,5,5);
 labPlane.rotation.y = -1.5;
 let roboPlane = addPlaneMess('material/robo.png',x,y+10,z,5);

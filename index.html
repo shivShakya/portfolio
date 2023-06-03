@@ -12,40 +12,51 @@
     <title>My Portfolio Site - (Shivam Shakya)</title>
 </head>
 <body>
-        <canvas id="canvas"></canvas>
-    
+      <div> <canvas id="canvas" class="canva-d"></canvas> </div> 
     <button class="btn-tog" onclick="toggleSidebar()" style="width: 25px;">☰</button>
    <div class="navbar">
       <div class="sidebar">
            <img src="material/shivam.jpeg" alt="Profile Image">
+           <h3 class='name'> Shivam Shakya</h3>
+           <div class="option-menu" id="projects-menu" onclick="toggleSideBar()">
+            <uL>
+                <li class="c-op">CraftStore</li>
+                <li class="a-op">Aamchi Mess</li>
+                <li class="f-op">Face Recognition Attandance System</li>
+                <li class="r-op">Robot Simulation</li>
+                <li class="o-op">Other Stuff</li>
+            </uL>
+      </div>
             <ul class="side-ul">
                 <li class="side-li about"><div>About Me</div></li>
                 <li class="side-li project"><div>Projects</div></li>
                 <li class="side-li certificate"><div>Certificates</div></li>
-                <li class="side-li clickable-div"><div>Resume</div></li>
-                <li class="side-li"><div>Contact</div></li>
+                <li class="side-li resume-but"><div>Resume</div></li>
+                <li class="side-li contact-but"><div>Contact</div></li>
             </ul>
        </div> 
           
     </div>
+       <button id="land">3D land</button>
        <button id="mode-toggle">
         <img src="material/sun.png" alt="Mode Toggle">
       </button> 
     </div>
-<div class="main-page">
+<div class="full-page"> 
     <div class="inst">
-            <h3>Instructions</h3>
-            <h2>  1 .  toogle every button you click . to see the the content and hide it.</h2>
-            <h2>  2 .  press Space to change the camera view to specific project</h2>
-            <h2>  3 .  press the first letter of project name to rotate around it</h2>
-    </div>
-    <div class="resume">
-        <div id="resume-div" style="display: block;">
+        <h3>Instructions</h3>
+        <h2>  1 .  toogle every button you click . to see the the content and hide it.</h2>
+        <h2>  2 .  press Space to change the camera view to specific project</h2>
+        <h2>  3 .  press the first letter of project name to rotate around it</h2>
+</div>
+<div class="main-page">
+      <div class="resume-div">
+        <div id="resume">
             <object data="material/ShivamShakyaResume.pdf" type="application/pdf" width="100%" height="800px">
                   <p>Unable to display PDF. Please download it <a href="material/ShivamShakyaResume.pdf" target="_blank">here</a>.</p>
             </object>
           </div>
-    </div>
+        </div>
     <div >
      <div  class="craft-box" style="overflow: auto;">
         <div class="title">
@@ -99,7 +110,7 @@
                  <div class="round-button" >
                        <img src="material/github-mark.png" alt="github" class="github-icon">
                  </div>
-                 <a  href="https://github.com/shivShakya/myApp" class="github-link">Github Repo</a>
+                 <a  href="https://github.com/shivShakya/AamchiMess" class="github-link">Github</a>
             </div>
        </div>
 
@@ -161,13 +172,10 @@
         <p>Technologies used in this project include Python, React, Flask framework (Python), and Python libraries such as scikit-learn, pandas, and numpy, as and when required.</p>
         <h1>You can check out Attendance System here:</h1>
         <div class="links">
-             <p>
-                   <a href="https://craftstore-shivshakya.vercel.app/signup">https://craftstore-shivshakya.vercel.app/signup</a>
-             </p>
              <div class="round-button" >
                    <img src="material/github-mark.png" alt="github" class="github-icon">
              </div>
-             <a  href="https://github.com/shivShakya/myApp" class="github-link">Github Repo</a>
+             <a  href="https://github.com/shivShakya/FaceRecognitionAttendanceSystem" class="github-link">Github</a>
         </div>
    </div>
 
@@ -175,27 +183,49 @@
     <img src="material/attendance.png" alt="Image 1">
 </div>
     </div>
+    <div class="other-box" style="overflow: auto;"> <div class="title">
+        <h1>Other Important Work in different fields</h1>
+    </div>
+
+    <div class="content" >
+
+        <p>Web Designing:</p>
+        <p>Github -->><a href="https://github.com/shivShakya/WebDesigning">https://github.com/shivShakya/WebDesigning</a></p>
+
+        <p> Java Development Practice:</p>
+        <p>Github -->> <a href="https://github.com/shivShakya/JavaAndroid">https://github.com/shivShakya/JavaAndroid</a></p>
+
+
+        <p>WebScraping:</p>
+        <p>Github -->><a href="https://github.com/shivShakya/WebScraping">https://github.com/shivShakya/WebScraping</a></p>
+
+        <p>Data Science Practice : </p>
+        <p>Github -->> <a href="https://github.com/shivShakya/DataScience">https://github.com/shivShakya/DataScience</a></p>
+         
+        <p>Pandas Data Analyst Project : </p>
+        <p>Github -->> <a href="https://github.com/shivShakya/PandasDataAnalystProject">https://github.com/shivShakya/PandasDataAnalystProject</a></p>
+
+
+   </div>
+    </div>
+
+
+
+
+
      <div class="room-box" style="overflow: auto;"> <div class="title">
         <h1>About Me</h1>
     </div>
     
-    <div class="content" >
-        <p></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate euismod lacus id vestibulum. Integer vel est eget enim ultrices venenatis a vel sapien. Nam eget lacinia eros. Duis consequat aliquam sapien, quis lobortis est rhoncus in. Morbi eget purus sit amet elit sodales auctor eget at dolor. Duis quis dolor massa. Ut volutpat sapien nunc, quis interdum augue imperdiet a. Donec commodo malesuada diam eu bibendum.</p>
-        <p>Pellentesque ut risus nec velit euismod accumsan sed ut leo. Sed facilisis vestibulum erat, vel maximus justo tempus sit amet. Duis varius odio sit amet neque tristique, vitae consectetur orci rhoncus. Nam at sem non ipsum rutrum malesuada. Proin rhoncus velit ac magna viverra imperdiet. Vivamus laoreet elit elit, vel imperdiet mauris volutpat nec. Morbi congue quam orci, id bibendum ex semper sit amet. Praesent maximus justo et ipsum sollicitudin, ac consequat ex elementum. Nam eu ullamcorper sapien. Proin quis nulla nisl. Donec pellentesque nisl et orci placerat, vel pretium justo interdum. Duis non metus vel velit tristique tincidunt vel eget nunc. </p>
-        <p>Fusce interdum, dolor ut dignissim pretium, enim tellus congue magna, id venenatis purus massa quis odio. Nulla facilisi. Proin fermentum posuere leo, vel rhoncus sapien euismod nec. Donec</p>
-
+    <div class="content">
+        <p>Hi, I'm Shivam Shakya, and I define myself as a poet, a theatre artist, and a programmer.</p>
+        <p>I am currently pursuing a master's degree in IMCA (Industrial Mathematics and Computer Application) from SavitriBai Phuley Pune University. I completed my graduation from Acharya Narendra Dev College of Delhi University, and my 10th and 12th from Government Inter College, Mainpuri.</p>
+        <p>In the field of computer science, I have been dedicatedly working for the past two years. Learning about new technologies, web development, and app development has become a hobby and a field of great interest for me. Additionally, I have knowledge in machine learning and data science, which has helped me develop projects more efficiently. I have also gained experience in working with computational geometry and computer graphics.</p>
+        <p>When it comes to full-stack development, I have explored the MERN stack proficiently. Moreover, I have a strong command of Python and have developed websites using frameworks such as Django and Flask.</p>
+        <p>In Android Development , I explored Java , and It was also a part of my course carriculum . Gaind expereince in Android studio , SDk , java swing such libraries and plateforms.</p>
+        <p> As writing code efficently by following procedural preogramming and object oriented programming is an important aspect and a task of programming, I practiced to write my project code more efficently by following softaware engineerion rules.</p>
+        <p>For more details, please take a look at my resume. Additionally, Please explore my portfolio to gain a better understanding of my projects.</p>
    </div>
-
-   <div class="container">
-    <img src="image1.jpg" alt="Image 1">
-    <img src="image2.jpg" alt="Image 2">
-    <img src="image3.jpg" alt="Image 3">
-    <img src="image4.jpg" alt="Image 4">
-    <img src="image5.jpg" alt="Image 5">
-    <img src="image6.jpg" alt="Image 6">
-    <img src="image7.jpg" alt="Image 7">
-</div>
   </div>
 
      <div class="cert-box" style="overflow: auto;"> <div class="title">
@@ -214,25 +244,56 @@
        </div>
 
        <div class="container">
-        <img src="image1.jpg" alt="Image 1">
-        <img src="image2.jpg" alt="Image 2">
-        <img src="image3.jpg" alt="Image 3">
-        <img src="image4.jpg" alt="Image 4">
-        <img src="image5.jpg" alt="Image 5">
-        <img src="image6.jpg" alt="Image 6">
-        <img src="image7.jpg" alt="Image 7">
+     
+
+        <img src="certificatesOnline/IMG_20230531_172522.jpg" alt="Image 3">
+        <img src="certificatesOnline/IMG_20230531_172622.jpg" alt="Image 4">
+        <img src="certificatesOnline/UC-6721cfea-775a-4c7f-9563-b481e4421016.jpeg" alt="Image 5">
+
     </div>
   </div>
-    </div>
-    <div class="option-menu" id="projects-menu">
-          <uL>
-              <li class="c-op">CraftStore</li>
-              <li class="a-op">Aamchi Mess</li>
-              <li class="f-op">Face Recognition Attandance System</li>
-              <li class="r-op">Robot Simulation</li>
-          </uL>
+</div>
+
+<div class="contact-box" style="overflow: auto;"> 
+        <div class="title">
+             <h1>Contact Me </h1>
+        </div>
+        <div class="content" >
+             <p> <h2>You can contact me -</h2></p>
+             <p> Email -   <a href="https://mail.google.com">shivdu2000@gmail.com</a></p>
+             <p> Phone - 8318357977</p>
+             <p> Github - <a href="https://github.com">https://github.com</a></p>
+             <p> LinkedIn - <a href="https://www.linkedin.com">https://www.linkedin.com</a></p>
+        </div>
+ </div>
+
+    <div class="skills" style="display:flex; justify-content: left;">
+         <div>
+            <h2>Programming Languages</h2>
+            <h1 > HTML/CSS</h1>
+            <h1> JavaScript</h1>
+            <h1> Java</h1>
+            <h1>Python</h1>
+        </div>
+        <div>
+            <h2>Framework</h2>
+            <h1>React js</h1>
+            <h1>Node js</h1>
+            <h1>Django</h1>
+            <h1>Flask</h1>
+        </div>
+        <div>
+            <h2>Database</h2>
+            <h1>PostgreSql</h1>
+            <h1>MongoDB</h1>
+        </div>
+        <div>
+            <h2>Development Tools</h2>
+            <h1> Android Studio</h1>
+        </div>
     </div>
 </div> 
+
     <div class="imp-btn">
             <Button id="change-script-btn"> Change camera positions</Button>
             <Button id="craftstore" >CraftStore</Button>
@@ -242,6 +303,7 @@
             <Button id="room">Room</Button>
             <Button id="cert">Certificates</Button>
     </div>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <script src="index.js"></script>
