@@ -1,20 +1,6 @@
-function toggleSidebar() {
-    var sidebar = document.querySelector(".sidebar");
-    var btnTog = document.querySelector(".btn-tog");
-    anime({
-      targets: sidebar,
-      width: sidebar.offsetWidth == 0 ? 250 : 0,
-      easing: "easeInOutQuad",
-      duration: 50
-    });
-    anime({
-      targets: btnTog,
-      width: btnTog.offsetWidth == 25 ? 234 : 25,
-      easing: "easeInOutQuad",
-      duration: 200
-    });
-  }
-
+                                            /*    All the best   */
+                                 /*        Connection with html DOM    */
+  
   //toogle tab
   const craftToggle = document.getElementById('craftstore');
   const messToggle = document.getElementById('mess');
@@ -22,6 +8,10 @@ function toggleSidebar() {
   const roboToggle = document.getElementById('robo');
   const roomToggle = document.getElementById('room');
   const certToggle = document.getElementById('cert');
+  const resumeToggle = document.querySelector('.resume-but');
+  const aboutMeItem = document.querySelector('.about');
+  const certificate = document.querySelector('.certificate');
+  const contact = document.querySelector('.contact-but');
   //articles
   const craft_Box = document.querySelector('.craft-box');
   const mess_Box = document.querySelector('.mess-box');
@@ -30,29 +20,57 @@ function toggleSidebar() {
   const room_Box = document.querySelector('.room-box');
   const cert_Box = document.querySelector('.cert-box');
   const other_box = document.querySelector('.other-box');
-
-
-
-
-  const resumeButton = document.querySelector('.resume-but');
+  const contBox = document.querySelector('.contact-box');
   const resume = document.querySelector('.resume-div');
-
-  resumeButton.addEventListener('click', function() {
-    console.log(resumeButton);
-    console.log(resume);
-    resume.classList.toggle('chat-1');
-
-  });
-
-  const aboutMeItem = document.querySelector('.about');
-
-  aboutMeItem.addEventListener('click', function() {
-        room_Box.classList.toggle('chat-1');
-    });
-
-  
+// project tab
+  const c_op = document.querySelector('.c-op');
+  const a_op = document.querySelector('.a-op');
+  const f_op = document.querySelector('.f-op');
+  const r_op = document.querySelector('.r-op');
+  const o_op = document.querySelector('.o-op');
 
 
+
+                                                /*        responsive div    */
+
+  // array for responsive 
+  const arr = [craft_Box,mess_Box,robo_Box,lab_Box,room_Box,cert_Box,other_box];
+
+  for(let i = 0 ; i < arr.length ; i++){
+       if(window.innerWidth <= 768){
+              arr[i].style.width = '100%';  
+              arr[i].style.height = '100%';   
+              arr[i].style.marginLeft = '0rem';
+              arr[i].style.marginTop = '-3rem';
+      }
+  }
+
+
+
+
+
+                              /*      Toggling of other button except project button in sidebar    */ 
+
+
+
+ // tabs other than project
+ const exToggle = [resumeToggle,aboutMeItem,certificate,contact];
+ const exBoxes = [resume,room_Box,cert_Box,contBox];
+
+ for(let i = 0 ; i < exToggle.length ; i++){
+          exToggle[i].addEventListener('click',function(){
+                exBoxes[i].classList.toggle('chat-1');
+          })
+ }
+
+
+
+
+                                 /*        Project toggling using sidebar project button and option    */
+
+
+
+  // to toggle project button for project option menu
 const projectMenu = document.querySelector('.project');
 const project = document.querySelector('.option-menu');
 projectMenu.addEventListener('click', function(){
@@ -62,88 +80,35 @@ projectMenu.addEventListener('click', function(){
             project.style.display = 'none';
          }
   })
+                                
+// option menu toggling
+const ProjectSideTog = [c_op,a_op,f_op,r_op,o_op];
+const ProjectBoxes = [craft_Box,mess_Box,lab_Box,robo_Box,other_box];
+
+for(let i = 0  ; i < ProjectSideTog.length ; i++){
+          ProjectSideTog[i].addEventListener('click',function(){
+                   ProjectBoxes[i].classList.toggle('chat-1');
+          })
+}
 
 
 
-  const certificate = document.querySelector('.certificate');
-  certificate.addEventListener('click', function(){
-           cert_Box.classList.toggle('chat-1');
-  })
-
-  
-
-  const contact = document.querySelector('.contact-but');
-  const contBox = document.querySelector('.contact-box');
-  contact.addEventListener('click', function(){
-         contBox.classList.toggle('chat-1');
-  })
+                                   /*        3d content and connection with articles           */
 
 
-
-
-
-  //functionality of toggling
-  craftToggle.addEventListener('click', function() {
-            craft_Box.classList.toggle('chat-1');
-   });
-  messToggle.addEventListener('click', function(){
-          mess_Box.classList.toggle('chat-1');
-   });
-   labToggle.addEventListener('click', function(){
-            lab_Box.classList.toggle('chat-1');
-   });
-   roboToggle.addEventListener('click', function(){
-    robo_Box.classList.toggle('chat-1');
-   });
-   roomToggle.addEventListener('click', function(){
-    room_Box.classList.toggle('chat-1');
-   });
-   certToggle.addEventListener('click', function(){
-          cert_Box.classList.toggle('chat-1');
-    });
-
-
-
-
- 
- // sidebar toggle
-  const modeToggle = document.getElementById('mode-toggle');
-  modeToggle.addEventListener('click', function() {
-          document.body.classList.toggle('dark-mode');
-          document.querySelector('.sidebar').classList.toggle('side-dark');
-          document.querySelector('.btn-tog').classList.toggle('btn-tog-t');
-  });
-
-  
-
-
-const c_op = document.querySelector('.c-op');
-const a_op = document.querySelector('.a-op');
-const f_op = document.querySelector('.f-op');
-const r_op = document.querySelector('.r-op');
-const o_op = document.querySelector('.o-op');
-
-c_op.addEventListener('click', function(){
-       console.log("hi");
-        craft_Box.classList.toggle('chat-1');
-});
-a_op.addEventListener('click', function(){
-        mess_Box.classList.toggle('chat-1');
-});
-f_op.addEventListener('click', function(){
-        lab_Box.classList.toggle('chat-1');
-});
-r_op.addEventListener('click', function(){
-       robo_Box.classList.toggle('chat-1');
- });
- o_op.addEventListener('click',function(){
-        other_box.classList.toggle('chat-1');
- });
-
-
+// button for connection 3d models with articles and toggling
+  const toggle3d = [craftToggle,messToggle,labToggle,roboToggle,roomToggle,certToggle];
+  const pro3d = [craft_Box,mess_Box,lab_Box,robo_Box,room_Box];
+  for(let i = 0 ; i < toggle3d.length ; i++){
+           toggle3d[i].addEventListener('click',function(){
+                 pro3d[i].classList.toggle('chat-1');    
+           })
+  }
+// button for toggling three.js script
  const land = document.getElementById("land");
  const canva = document.querySelector('.canva-d');
  const pos = document.querySelector('.change-script-btn');
+ canva.style.display = 'none';
  land.addEventListener('click',function(){
        if (canva.style.display === 'none'){
                   canva.style.display = 'block';
@@ -152,5 +117,38 @@ r_op.addEventListener('click', function(){
        }  
        
  });
+
+
+
+
+                                        /*        sidebar toggling and animation          */
+
+
+
+// sidebar toggle
+  const modeToggle = document.getElementById('mode-toggle');
+  modeToggle.addEventListener('click', function() {
+          document.body.classList.toggle('dark-mode');
+          document.querySelector('.sidebar').classList.toggle('side-dark');
+          document.querySelector('.btn-tog').classList.toggle('btn-tog-t');
+  });
+// animation of sidebar using anime
+ function toggleSidebar() {
+       var sidebar = document.querySelector(".sidebar");
+       var btnTog = document.querySelector(".btn-tog");
+       anime({
+         targets: sidebar,
+         width: sidebar.offsetWidth == 0 ? 250 : 0,
+         easing: "easeInOutQuad",
+         duration: 50
+       });
+       anime({
+         targets: btnTog,
+         width: btnTog.offsetWidth == 25 ? 234 : 25,
+         easing: "easeInOutQuad",
+         duration: 200
+       });
+     }
+   
 
  

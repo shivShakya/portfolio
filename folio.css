@@ -285,6 +285,7 @@ body {
 }
 
 #change-script-btn{
+   visibility: visible;
    margin-top: 30rem;
    margin-bottom: 10rem;
    background-color: rgb(41, 80, 116);
@@ -478,7 +479,8 @@ object {
 
 
 .canva-d{
-   display: none;
+   width:0px;
+   height:0px;
 }
 
 #land{
@@ -491,10 +493,35 @@ object {
 }
 
 
+.skills{
+  display:flex; 
+  justify-content: right;
+  margin: 10%;
+  z-index: -6000;
+}
+
+.skills div{
+   margin-left: 10%;
+}
+.skills h2{
+   color: rgb(41, 80, 116);
+}
 
 
-@media screen and (max-width: 768px) {
+.name{
+  display: flex;
+  justify-content: center;
+}
 
+
+/* for responsive design */
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  
+  .full-page{
+    display: inline-block;
+    justify-content: left;
+}
 
   #change-script-btn{
       margin-top: 50rem;
@@ -502,24 +529,24 @@ object {
   }
 
   .inst {
-        width: 80%; 
-        height:20rem;
-        margin-left: 2rem;
-        margin-top: 3rem;
-        margin-right: 5rem;
-        position: relative;   
-        z-index: -3000; 
+        display:none;
   }
   .inst h2{
         align-items: center;
   }
 
   #land{
-    margin-left: 44%;
+      display: none;
   }
+
+  .canvas-div{
+    display: none;
+ }
+
+ 
   .option-menu{
       margin-left: 2%;
-      margin-top: 70%;
+      margin-top: 0%;
       position: relative;
   }
   .main-page{
@@ -540,22 +567,22 @@ object {
      height: 90%;
      margin-left: 0.5%;
   }
+  
+
+  .imp-btn{
+    display: none;
+ }
+
+ .skills {
+  display:block; 
+  justify-content: center;
+  margin-left: 0rem;
+  margin-top: -2rem;
+  font-size:  1rem;
+  background-color: rgba(41, 80, 116, 0.417);
+  overflow: auto;
+  }
 }
 
 
-.skills{
-    margin: 10%;
-    z-index: -6000;
-}
 
-.skills div{
-     margin-left: 10%;
-}
-.skills h2{
-     color: rgb(41, 80, 116);
-}
-
-.name{
-    display: flex;
-    justify-content: center;
-}
